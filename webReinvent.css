@@ -40,7 +40,7 @@
   .price {
     grid-area: price;
     display: grid;
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 60% 40%;
     grid-template-areas:
       "house-name age"
       "amount age"
@@ -75,7 +75,7 @@
     grid-area: stats;
     display: flex;
     padding: 20px;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     border-bottom: 1px solid gray;
   }
   
@@ -135,7 +135,7 @@
     grid-area: name;
   }
   
-  @media (min-width: 768px) and (max-width: 1300px) {
+  @media (min-width: 700px) and (max-width: 1300px) {
     .container {
       height: 30vh;
       width: 90vw;
