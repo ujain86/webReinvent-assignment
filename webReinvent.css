@@ -1,0 +1,206 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+  .container {
+    height: 80vh;
+    width: 90vw;
+    display: grid;
+    grid-template-rows: 40% 20% 15% 25%;
+    border-radius: 10px;
+    overflow: hidden;
+    grid-template-areas:
+      "image"
+      "price"
+      "stats"
+      "realtor";
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+  
+  .container > div {
+    width: 100%;
+  }
+  
+  .image {
+    grid-area: image;
+    text-align: center;
+  }
+  
+  .fa-heart {
+    position: absolute;
+    margin: 10px;
+  }
+  
+  .realtor {
+    grid-area: realtor;
+    padding: 20px;
+    background-color: rgb(249, 255, 255);
+  }
+  
+  .price {
+    grid-area: price;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-areas:
+      "house-name age"
+      "amount age"
+      "address age";
+    padding: 15px;
+    border-bottom: 1px solid gray;
+  }
+  
+  .price p {
+    margin: 0;
+  }
+  
+  .house-name {
+    grid-area: house-name;
+  }
+  
+  .amount {
+    grid-area: amount;
+    font-size: 2rem;
+  }
+  
+  .age {
+    grid-area: age;
+  }
+  
+  .address {
+    grid-area: address;
+    color: gray;
+  }
+  
+  .stats {
+    grid-area: stats;
+    display: flex;
+    padding: 20px;
+    font-size: 1.3rem;
+    border-bottom: 1px solid gray;
+  }
+  
+  .stats span {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  
+  .stats i {
+    margin-right: 10px;
+    width: 30px;
+  }
+  
+  #home-img {
+    height: 100%;
+    width: 100%;
+  }
+  
+  .realtor-heading {
+    height: 30%;
+    color: gray;
+  }
+  
+  .realtor-heading p {
+    margin: 0;
+  }
+  
+  .realtor-content p {
+    margin: 0;
+  }
+  
+  .realtor-content {
+    height: 70%;
+    display: grid;
+    grid-template-rows: 30% 70%;
+    grid-template-columns: 30% 70%;
+    grid-template-areas:
+      "image name"
+      "image phone";
+  }
+  
+  .realtor-img {
+    grid-area: image;
+    border-radius: 50%;
+    height: 80%;
+    width: 80%;
+  }
+  
+  .realtor-phone {
+    grid-area: phone;
+    color: gray;
+  }
+  
+  .realtor-name {
+    grid-area: name;
+  }
+  
+  @media (min-width: 768px) and (max-width: 1300px) {
+    .container {
+      height: 30vh;
+      width: 90vw;
+      display: grid;
+      grid-template-rows: 50% 50%;
+      grid-template-columns: 40% 1.2fr 1fr;
+      grid-template-areas:
+        "image realtor price"
+        "image stats price";
+    }
+  
+    .stats {
+      flex-direction: column;
+      padding: 20px;
+      border-bottom: 0px solid gray;
+      border-right: 1px solid gray;
+    }
+  
+    .realtor {
+      padding: 5px 20px;
+      background-color: white;
+      border-bottom: 1px solid gray;
+      border-right: 1px solid gray;
+    }
+  
+    .price {
+      grid-template-areas:
+        "house-name"
+        "age"
+        "amount"
+        "address";
+      padding: 40px 15px;
+      grid-template-columns: 100%;
+      background-color: rgb(249, 255, 255);
+      border-bottom: 0px solid gray;
+    }
+  }
+  
+  @media (min-width: 1301px) {
+    .container {
+      height: 25vh;
+      width: 90vw;
+      display: grid;
+      grid-template-rows: 100%;
+      grid-template-columns: 30% 25% 1fr 1fr;
+      grid-template-areas: "image price realtor stats";
+    }
+  
+    .stats {
+      flex-direction: column;
+      padding: 40px;
+      text-align: center;
+      background-color: rgb(249, 255, 255);
+      border-bottom: 0px solid gray;
+    }
+  
+    .price {
+      padding: 40px 10px;
+      grid-template-columns: 60% 40%;
+      border-right: 1px solid gray;
+      border-bottom: 0px solid gray;
+    }
+  
+    .realtor {
+      border-right: 1px solid gray;
+    }
+  }
+  
